@@ -22,14 +22,4 @@ public interface UsersMapper {
             @Mapping(target="settlement", source="user.settlement")
     })
     UserDto userToUserDto(User user);
-
-    /*@Mappings({
-            @Mapping(target="email", source="user.email"),
-            @Mapping(target="name", source="user.name"),
-            @Mapping(target="surname", source="user.surname"),
-            @Mapping(target="age", source="user.age"),
-            @Mapping(target="phoneNumber", source="user.phoneNumber"),
-            @Mapping(target="settlement", source="user.settlement")
-    })
-    List<UserDto> userToUserDto(Collection<User> users);*/
 }
