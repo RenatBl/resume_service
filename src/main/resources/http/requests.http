@@ -1,0 +1,155 @@
+#sign up
+POST http://localhost:8080/api/signUp
+Content-Type: application/json
+
+{
+  "email": "ii@mail.ru",
+  "password": "123",
+  "name": "Ivan",
+  "surname": "Ivanov",
+  "age": 20,
+  "phoneNumber": "+790678965433",
+  "settlement": "Kazan"
+}
+
+###
+#sign in
+POST http://localhost:8080/api/signIn
+Content-Type: application/json
+
+{
+  "email": "rb@mail.ru",
+  "password": "123"
+}
+
+###
+#update account
+PUT http://localhost:8080/api/account
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZjdkYTRiOGI3NTEwOTZiMWViNGM4NzgiLCJuYW1lIjoicmJAbWFpbC5ydSIsInJvbGUiOiJVU0VSIn0.KQgJUs-nxD94xiSbSffm7V57ofA2jAoudE0sJ8zBo6o
+
+{
+  "id": {
+    "timestamp": 1602069688,
+    "date": "2020-10-07T11:21:28.000+00:00"
+  },
+  "email": "rb@mail.ru",
+  "password": "123",
+  "name": "Renat",
+  "surname": "Blinov",
+  "age": 20,
+  "phoneNumber": "+790678965437",
+  "settlement": "Kazan"
+}
+
+###
+#get account
+GET http://localhost:8080/api/account
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZjdkYTRiOGI3NTEwOTZiMWViNGM4NzgiLCJuYW1lIjoicmJAbWFpbC5ydSIsInJvbGUiOiJVU0VSIn0.KQgJUs-nxD94xiSbSffm7V57ofA2jAoudE0sJ8zBo6o
+
+###
+#create resume
+POST http://localhost:8080/api/resume
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZjdkYTRiOGI3NTEwOTZiMWViNGM4NzgiLCJuYW1lIjoicmJAbWFpbC5ydSIsInJvbGUiOiJVU0VSIn0.KQgJUs-nxD94xiSbSffm7V57ofA2jAoudE0sJ8zBo6o
+
+{
+  "educations": [
+    {
+      "graduationYear": "2022",
+      "institution": "KFU",
+      "level": "Bachelor",
+      "specialization": "Computer science"
+    }
+  ],
+  "employmentType": "Full employment",
+  "jobTitle": "Middle Java developer",
+  "languages": [
+    {
+      "language": "English",
+      "level": "B1"
+    },
+    {
+      "language": "Russian",
+      "level": "C2"
+    }
+  ],
+  "skills": [
+    "Java",
+    "Spring MVC",
+    "Spring security",
+    "Spring Data",
+    "Spring Boot"
+  ],
+  "workExperiences": [
+    {
+      "position": "Java developer",
+      "workingPlace": "KFU",
+      "workingTime": "3 years"
+    }
+  ]
+}
+
+###
+#get all resume
+GET http://localhost:8080/api/resume
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZjdkYTRiOGI3NTEwOTZiMWViNGM4NzgiLCJuYW1lIjoicmJAbWFpbC5ydSIsInJvbGUiOiJVU0VSIn0.KQgJUs-nxD94xiSbSffm7V57ofA2jAoudE0sJ8zBo6o
+
+###
+#get resume
+GET http://localhost:8080/api/resume/5f7ddbd0f55ddc77b91a0706
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZjdkYTRiOGI3NTEwOTZiMWViNGM4NzgiLCJuYW1lIjoicmJAbWFpbC5ydSIsInJvbGUiOiJVU0VSIn0.KQgJUs-nxD94xiSbSffm7V57ofA2jAoudE0sJ8zBo6o
+
+###
+#update resume
+PUT http://localhost:8080/api/resume
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZjdkYTRiOGI3NTEwOTZiMWViNGM4NzgiLCJuYW1lIjoicmJAbWFpbC5ydSIsInJvbGUiOiJVU0VSIn0.KQgJUs-nxD94xiSbSffm7V57ofA2jAoudE0sJ8zBo6o
+
+{
+  "id": "5f7ddbd0f55ddc77b91a0706",
+  "educations": [
+    {
+      "graduationYear": "2022",
+      "institution": "KFU",
+      "level": "Bachelor",
+      "specialization": "Computer science"
+    }
+  ],
+  "employmentType": "Full employment",
+  "jobTitle": "Middle Java developer",
+  "languages": [
+    {
+      "language": "English",
+      "level": "B1"
+    },
+    {
+      "language": "Russian",
+      "level": "C2"
+    }
+  ],
+  "skills": [
+    "Java",
+    "Spring MVC",
+    "Spring security",
+    "Spring Data",
+    "Spring Boot",
+    "Hibernate"
+  ],
+  "workExperiences": [
+    {
+      "position": "Java developer",
+      "workingPlace": "KFU",
+      "workingTime": "3 years"
+    }
+  ]
+}
+
+###
+#delete resume
+DELETE http://localhost:8080/api/resume/5f7ddebfc49a0e61bc6ed0d3
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZjdkYTRiOGI3NTEwOTZiMWViNGM4NzgiLCJuYW1lIjoicmJAbWFpbC5ydSIsInJvbGUiOiJVU0VSIn0.KQgJUs-nxD94xiSbSffm7V57ofA2jAoudE0sJ8zBo6o
+
+###
+
+
