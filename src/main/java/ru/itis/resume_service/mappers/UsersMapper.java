@@ -5,10 +5,6 @@ import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
 import ru.itis.resume_service.dto.UserDto;
 import ru.itis.resume_service.models.User;
-import ru.itis.resume_service.services.UsersService;
-
-import java.util.Collection;
-import java.util.List;
 
 @Mapper
 public interface UsersMapper {
