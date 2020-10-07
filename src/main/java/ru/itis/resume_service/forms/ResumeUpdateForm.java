@@ -1,5 +1,7 @@
 package ru.itis.resume_service.forms;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,7 +17,9 @@ import java.util.List;
 @NoArgsConstructor
 public class ResumeUpdateForm {
 
+    @JsonSerialize(using= ToStringSerializer.class)
     private ObjectId id;
+
     private String jobTitle;
     private List<WorkExperience> workExperiences;
     private String employmentType;
