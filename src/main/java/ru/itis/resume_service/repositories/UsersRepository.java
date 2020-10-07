@@ -6,7 +6,6 @@ import ru.itis.resume_service.models.User;
 
 import java.util.Optional;
 
-public interface UsersRepository extends MongoRepository<User, Long> {
+public interface UsersRepository extends MongoRepository<User, ObjectId> {
     Optional<User> getByEmail(String email);
-    Optional<User> getById(ObjectId id);
 }

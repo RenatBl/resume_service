@@ -40,7 +40,7 @@ public class JwtAuthenticationProvider implements AuthenticationProvider {
         }
         String id = claims.get("sub", String.class);
         ObjectId objectId = new ObjectId(id);
-        Optional<User> userCandidate = usersRepository.getById(objectId);
+        Optional<User> userCandidate = usersRepository.findById(objectId);
         if (userCandidate.isPresent()) {
             User user = userCandidate.get();
             authentication.setAuthenticated(true);
